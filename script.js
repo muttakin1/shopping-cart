@@ -15,8 +15,35 @@ $(document).ready(function(){
   console.log("Start here");
   // Basic tasks
   // 1. Show / hide cart section on button click (Cart button / close cutton)
+  $('#showCartBtn').click(function(){
+    $('#cart').show();
+  })
+
+  $('#close').click(function(){
+    $('#cart').hide();
+  })
+  
   // 2. Dynamically load products to view
+  for(var i = 0; i  < products.length; i++){
+      var divCol = $('<div class="col-md-4">')
+      var divCard = $('<div class="card">')
+      var image = $('<img class="card-img-top" src="'+products[i].image+'" />')
+      var divCardBody = $('<div class="card-body">')
+      var title = $('<h5 class="card-title">'+products[i].name+'</h5>')
+      var text = $('<p class="card-text">$ '+products[i].price+'</p>')
+      var cartBtn = $('<button class="btn btn-primary">Add to Cart</button>')
+      cartBtn.attr('id', i)
+      divCard.append(image)
+      divCardBody.append(title)
+      divCardBody.append(text)
+      divCardBody.append(cartBtn)
+      divCard.append(divCardBody)
+      divCol.append(divCard)
+      $('#products .row').append(divCol)
+  }
+
   // 3. Dynamically show total items in Cart
+  
   // 4. Add to cart button functionality
   // 5. Dynamically load cart items
   // 6. Implement quantity update for each cart item and update total cost dynamically.
