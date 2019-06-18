@@ -66,14 +66,14 @@ $(document).ready(function () {
       var divcartbody = $('<div class="card-body">')
       var divcarttitle = $('<h5 class="card-title">' + cart.items[i].name + '</h5>')
       var divcarttext = $(' <p class="card-text">$ 14 x <input type="number" min="0"></p>')
-      var cartBtn = $('<button class="btn btn-primary">Add to Cart</button>')
-      cartBtn.attr('id', i)
+     
+      divcartBtn.attr('id', i)
       
 
       divcartCard.append(divcartimg)
       divcartbody.append(divcarttitle)
       divcartbody.append(divcarttext)
-      divCardBody.append(cartBtn)
+      
       console.log("done")
      
       
