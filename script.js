@@ -51,6 +51,7 @@ $(document).ready(function () {
     })
 
   }
+  
   // 1. Show / hide cart section on button click (Cart button / close cutton)
   // 5. Dynamically load cart items
   $('#showCartBtn').click(function () {
@@ -67,7 +68,7 @@ $(document).ready(function () {
       var divcarttitle = $('<h5 class="card-title">' + cart.items[i].name + '</h5>')
       var divcarttext = $(' <p class="card-text">$ 14 x <input type="number" min="0"></p>')
      
-      divcartBtn.attr('id', i)
+    
       
 
       divcartCard.append(divcartimg)
